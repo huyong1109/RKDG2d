@@ -27,7 +27,7 @@ module element_mod
      ! Flimit(1) = F+(x_a), Flimit(2) = F-(x_b)
      real (kind=long_kind) :: Fu(np)   
      ! Fhat(1) = F^(x_a) = 0.5*(F- + F+) - \alpha (U- +U+), Fhat(2) = F^(x_b)
-     real (kind=long_kind) :: Fstar(2)   ! 
+     real (kind=long_kind) :: Fstar(2)   ! chage to four sides in two dimension
      real (kind=long_kind) :: Fhat(2)   ! F left at j-1/2  and right at j+1/2 limit
      real (kind=long_kind) :: vhat(2)   ! F left and right limit
 
