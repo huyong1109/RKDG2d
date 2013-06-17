@@ -13,8 +13,8 @@ module kinds
   long_kind    = 8,                       &
   log_kind     = 4,                       &
   real_kind    = 8,                       &
-  longdouble_kind    = 16,                      &
-  iulog        = 6                          ! stderr file handle
+  iulog        = 6,                       &   ! stderr file handle
+  longdouble_kind = 16                
 
 end module kinds
 
