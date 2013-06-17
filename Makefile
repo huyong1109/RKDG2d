@@ -10,7 +10,7 @@ OBJS =  kinds.o control.o physical_constants.o  quadrature_mod.o  dimensions_mod
 ###################################################################################
 
 dg1g: $(OBJS)
-	$(FC)  -o dg1g  $(OBJS) $(NLIB)
+	$(FC)  -o dg2d  $(OBJS) $(NLIB)
 
 .SUFFIXES : .F90
 .F90.o:
