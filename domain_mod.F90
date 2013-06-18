@@ -67,6 +67,9 @@ contains
         neigh%up    =  nproc + proc_x
         neigh%down  =  nproc - proc_x
     endif 
+    write(*,*) "PROC id : ", nproc
+    write(*,*) "  left = ", neigh%left, "  right = ",neigh%right  
+    write(*,*) "  up   = ", neigh%up,   "  down  = ", neigh%down
 
     ! Local stuff , serial version 
     if (mod(nelem_x, proc_x) /= 0 .OR. mod(nelem_y, proc_y)  /= 0) then 
