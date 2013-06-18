@@ -21,7 +21,7 @@ use element_mod, only:  elem_t
   type, private :: neighbors 
       sequence 
       integer :: left, right, up, down
-  end type neighors
+  end type neighbors
   ! variable   
   type(elem_t),allocatable, public :: ele(:,:)
   type(domain2D_t), public :: domain
@@ -59,7 +59,7 @@ contains
     if(lproc_y == 0) then 
         neigh%up    = nproc + proc_x
         neigh%down  = nproc + (proc_y-1)*proc_x
-    else if (j == proc_y-1) then
+    else if (lproc_y == proc_y-1) then
         neigh%up    = nproc - (proc_y-1)*proc_x
         neigh%down  = nproc - proc_x
 

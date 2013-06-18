@@ -1,15 +1,11 @@
 module comm
 use kinds, only: long_kind
 use control, only: stepnow
-use domain_mod, only: ele
+use domain_mod, only: ele, domain, neigh
 use dimensions_mod, only: np,nc, nelem_x, nelem_y
 implicit none 
 private 
 
-type :: neighbors
-        sequence 
-        integer :: 
-public :: bndy
 contains 
 subroutine bndy(tn) 
     
@@ -22,8 +18,6 @@ subroutine bndy(tn)
        ! ele(left)%Fhat(2) = ele(i)%Fu(1)
        ! ele(i)%vhat(1) = ele(left)%v(np, tn)
        ! ele(left)%vhat(2) = ele(i)%v(1, tn)
-       end do         
-    end do 
 end subroutine bndy 
 
 end module comm 
