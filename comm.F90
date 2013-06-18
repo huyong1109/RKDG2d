@@ -16,21 +16,21 @@ subroutine bndy(tn)
     do i = 1, nelem_x
         
 	if(i == 1) then 
-            left = nelem
+            left = nelem_x
         else 
             left = i -1
         endif 
         do j = 1, nelem_y
 	     if(j == 1) then 
-                 up = nelem
+                 down  = nelem_y
              else 
-                 left = i -1
+                 down =  j -1
              endif 
 	! exchange Fu and u boundary 
-        ele(i)%Fhat(1) = ele(left)%Fu(np)
-        ele(left)%Fhat(2) = ele(i)%Fu(1)
-        ele(i)%vhat(1) = ele(left)%v(np, tn)
-        ele(left)%vhat(2) = ele(i)%v(1, tn)
+       ! ele(i,j)%Fhat(1) = ele(left)%Fu(np)
+       ! ele(left)%Fhat(2) = ele(i)%Fu(1)
+       ! ele(i)%vhat(1) = ele(left)%v(np, tn)
+       ! ele(left)%vhat(2) = ele(i)%v(1, tn)
         
     end do 
 end subroutine bndy 
