@@ -1,9 +1,9 @@
-INCLDIR  = -I. -I/apps/intel/impi/4.0.2.003/intel64/include -I/home/hxm/esm-soft/include
-CPPFLAGS = -P -traditional 
+INCLDIR  = #-I. -I/apps/intel/impi/4.0.2.003/intel64/include -I/home/hxm/esm-soft/include
+CPPFLAGS = #-P -traditional 
 CPP      = 
 NLIB     = 
 
-FC=  ifort  $(FFLAGS)
+FC=  gfortran  $(FFLAGS)
 OBJS =  kinds.o control.o physical_constants.o  quadrature_mod.o  dimensions_mod.o   element_mod.o   domain_mod.o  output.o  comm.o \
 	init.o  advance.o RKDG.o dg.o
 
